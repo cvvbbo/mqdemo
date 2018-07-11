@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--43dp,在720*1280手机上-->
+    <ImageView
+        android:layout_gravity="center"
+        android:src="@drawable/test_im"
+        android:id="@+id/iv"
+        android:layout_width="@dimen/x38"
+        android:layout_height="@dimen/x38"/>
+
+    <TextView
+        android:textSize="10sp"
+        android:layout_below="@+id/iv"
+        android:layout_gravity="center"
+        android:text="23333奥术大师大所多"
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+</LinearLayout>

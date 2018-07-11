@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:id="@+id/rlroot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+
+
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/calendar_bar_color" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="@dimen/x6"
+        android:stateListAnimator="@null">
+
+
+        <RadioButton
+            android:id="@+id/rdbt1"
+            style="@style/radiogroup"
+            android:text="首页"
+            android:textColor="@drawable/select_radio_textcolor" />
+
+
+        <!--  android:drawableTop="@drawable/select_send"-->
+        <RadioButton
+            android:id="@+id/rdbt2"
+            style="@style/radiogroup"
+            android:text="消息"
+            android:textColor="@drawable/select_radio_textcolor" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <!--android:drawableTop="@drawable/select_find"-->
+        <RadioButton
+            android:id="@+id/rdbt3"
+            style="@style/radiogroup"
+            android:text="资讯"
+            android:textColor="@drawable/select_radio_textcolor" />
+
+
+        <!--android:drawableTop="@drawable/select_me"-->
+        <RadioButton
+            android:id="@+id/rdbt4"
+            style="@style/radiogroup"
+            android:text="我的"
+            android:textColor="@drawable/select_radio_textcolor" />
+
+
+    </RadioGroup>
+
+</LinearLayout>
+
+    <ImageView
+        android:id="@+id/add_more"
+        android:layout_marginBottom="@dimen/y8"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/x39"
+        android:layout_height="@dimen/x39"
+        android:background="@drawable/add1"/>
+
+    </RelativeLayout>

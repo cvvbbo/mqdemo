@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:clipChildren="false"
+    android:id="@+id/rlroot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<RelativeLayout
+    android:clipChildren="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/line_color" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dip"
+        android:progressDrawable="@drawable/pg"
+        android:visibility="gone" />
+
+
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/line_color" />
+
+    <RadioGroup
+        android:layout_alignParentBottom="true"
+        android:clipChildren="false"
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/x8">
+
+
+        <RadioButton
+            android:textColor="@drawable/select_radio_textcolor"
+            android:id="@+id/rdbt1"
+            style="@style/radiogroup"
+            android:drawableTop="@drawable/select_work"
+            android:text="工作台" />
+
+
+        <RadioButton
+            style="@style/radiogroup"
+            android:textColor="@drawable/select_radio_textcolor"
+            android:drawableTop="@drawable/select_send"
+            android:id="@+id/rdbt2"
+            android:text="我要寄件"
+            />
+
+
+        <!--<ImageView-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:background="@drawable/add"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="100dp" />-->
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+
+
+        <RadioButton
+            style="@style/radiogroup"
+            android:textColor="@drawable/select_radio_textcolor"
+            android:id="@+id/rdbt3"
+            android:drawableTop="@drawable/select_find"
+            android:text="运单跟踪"
+            />
+
+
+
+        <RadioButton
+            android:textColor="@drawable/select_radio_textcolor"
+            android:drawableTop="@drawable/select_me"
+            android:id="@+id/rdbt4"
+            android:text="我的"
+            style="@style/radiogroup"
+            />
+
+
+    </RadioGroup>
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/add"
+        android:layout_width="wrap_content"
+         android:layout_height="100dp" />
+
+</RelativeLayout>
+
+    </RelativeLayout>

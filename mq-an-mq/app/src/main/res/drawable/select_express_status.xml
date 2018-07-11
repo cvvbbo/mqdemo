@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item android:state_checked="true" android:drawable="@drawable/p_account"/>-->
+    <!--<item android:drawable="@drawable/n_account"/>-->
+
+    <item android:state_checked="true" android:drawable="@drawable/status_send"/>
+    <item android:drawable="@drawable/status_sign"/>
+
+</selector>

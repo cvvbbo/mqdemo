@@ -1,0 +1,128 @@
+<RelativeLayout android:id="@+id/ly2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/y22"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- android:paddingLeft="@dimen/x30"-->
+    <LinearLayout
+        android:id="@+id/ly3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x15"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/x30">
+
+        <TextView
+            android:id="@+id/my_user_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:text="百智生活..."
+            android:textSize="10sp" />
+
+        <TextView
+            android:ellipsize="end"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:id="@+id/my_sender_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="某某某V"
+            android:textColor="@color/back"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <!-- android:layout_width="@dimen/x72"
+        android:layout_height="@dimen/x72"-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/rl1">
+
+        <ImageView
+            android:layout_width="@dimen/x9"
+            android:layout_height="@dimen/x3"
+            android:layout_marginRight="@dimen/x5"
+            android:layout_marginTop="@dimen/x6"
+            android:background="@drawable/left" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/y4">
+
+        <TextView
+            android:textColor="#007AFF"
+            android:id="@+id/my_circle"
+            android:layout_width="@dimen/x43"
+            android:layout_height="@dimen/x43"
+            android:background="@drawable/shape_center_circle"
+            android:gravity="center"
+            android:text="haha"
+            android:textSize="11sp"
+             />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/rl1">
+
+        <ImageView
+            android:layout_width="@dimen/x13"
+            android:layout_height="@dimen/x9"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginTop="@dimen/x6"
+            android:background="@drawable/right" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ly4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/x15"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/x30">
+
+        <TextView
+            android:id="@+id/my_receive_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:text="百智生活..."
+            android:textSize="10sp" />
+
+        <TextView
+            android:ellipsize="end"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:id="@+id/my_receive_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="某某某V"
+            android:textColor="@color/back"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</RelativeLayout>

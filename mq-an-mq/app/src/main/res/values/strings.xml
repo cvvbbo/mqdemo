@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">秒签速递</string>
+
+
+    <string-array name="file_type">
+        <item>全部文件</item>
+        <item>发件管理</item>
+        <item>收件管理</item>
+        <item>归档管理</item>
+        <item>待支付</item>
+        <item>草稿箱</item>
+    </string-array>
+
+    <!--发件管理-->
+    <string-array name="send_file">
+        <item>全部发件</item>
+        <item>待他签收</item>
+        <item>待他盖章寄回</item>
+        <item>他已签收</item>
+        <item>他已盖章寄回</item>
+        <item>他已拒收</item>
+    </string-array>
+    
+    <!--收件管理-->
+    <string-array name="receiver_file">
+        <item>全部收件</item>
+        <item>待我签收</item>
+        <item>待我盖章</item>
+        <item>我已签收</item>
+        <item>我已盖章</item>
+        <item>我已拒收</item>
+    </string-array>
+
+    <string-array name="receiver_manger">
+        <item>全部归档文件</item>
+        <item>已归档合同</item>
+        <item>已归档普通文件</item>
+    </string-array>
+
+    <string name="delete">撤销</string>
+    <string name="sign">签收</string>
+    <string name="watch">查看</string>
+    <string name="reminder">催单</string>
+    <string name="rejection">拒收</string>
+
+
+    <string name="about_me">关于秒签</string>
+
+</resources>

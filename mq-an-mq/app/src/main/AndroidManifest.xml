@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.emiaoqian.app.mq">
+
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--友盟-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!--友盟分享-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+
+    <application
+        android:name="com.emiaoqian.app.mq.application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/mqlog"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.emiaoqian.app.mq.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <!--友盟分享-->
+        <!--扣扣，微信，微博都是精简版的-->
+        <!--微信-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!--dingding-->
+        <activity
+            android:name=".ddshare.DDShareActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- alipay callback-->
+        <activity
+            android:name=".apshare.ShareEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!--qq-->
+        <!--精简版的配置和完整版的不一样-->
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!--这里的scheme是qq分享要用的，根据自己申请的appid=100424468，可以写成如下格式，
+                appid与自己应用不一致的话，会导致分享成功成功，但是返回后提示分享取消了，不会走分享成功的回调方法-->
+                <data android:scheme="tencent1106318875" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+
+
+
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <!--以上是友盟分享-->
+
+
+        <!--<activity android:name=".activity.Mainactivity">-->
+        <!--三种全上才能把不让底部导航栏-->
+        <activity
+            android:name=".activity.Mainactivity"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--可以使app强制横屏显示-->
+        <activity
+            android:name=".activity.WebviewActivity"
+            android:screenOrientation="portrait" />
+
+
+
+        <activity
+            android:name=".activity.GuideActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <!--这个是4个Activity的那个类--> <!--1.17-->
+        <!--<activity-->
+        <!--android:windowSoftInputMode="adjustPan"-->
+        <!--android:name=".activity.Mainactivity"-->
+        <!--android:launchMode="singleTask"-->
+        <!--android:screenOrientation="portrait"></activity>-->
+
+        <!--<activity android:name=".activity.SplashActivity"/>-->
+
+        <activity android:name=".activity.WebviewtoNewActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <receiver android:name="com.emiaoqian.app.mq.receiver.DownloadReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+
+        <!--这个是友盟统计（正式版）-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="59c093d875ca355a7b000039" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${CHANNEL_NAME}" />
+
+        <!--下面是友盟推送的（正式版）-->
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="17ac0b47feb620a7975963cc00c61b20"></meta-data>
+
+
+        <!--测试-->
+        <!--<meta-data android:name="UMENG_APPKEY" android:value="59f06674734be478fb00009e"/>-->
+        <!--<meta-data android:name="UMENG_CHANNEL" android:value="${CHANNEL_NAME}"/>-->
+
+        <!--测试-->
+        <!--<meta-data-->
+        <!--android:name="UMENG_MESSAGE_SECRET"-->
+        <!--android:value="cd4726afb0ef9d0b139dff13133bcc26">-->
+        <!--</meta-data>-->
+
+    </application>
+
+</manifest>

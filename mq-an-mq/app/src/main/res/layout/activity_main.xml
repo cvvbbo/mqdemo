@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Setttingactivity2">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        >
+        <RelativeLayout
+            android:layout_marginRight="@dimen/x10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x18"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="关于与帮助"
+                />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/lly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/x100"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/x20"
+            android:src="@drawable/login"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/x5"
+            android:text="秒签速递"
+            android:textSize="@dimen/x20"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="v1.0"/>
+
+        <RelativeLayout
+            android:id="@+id/version_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50"
+            android:layout_marginTop="@dimen/x20"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x15"
+                android:text="应用版本"
+                android:textColor="#9b9b9b"
+                android:textSize="@dimen/x15"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#1a000000"/>
+
+        <RelativeLayout
+            android:id="@+id/home_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50"
+
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x6">
+
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x15"
+                android:text="帮助中心"
+                android:textColor="#9b9b9b"
+                android:textSize="@dimen/x15"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#1a000000"/>
+
+        <RelativeLayout
+            android:id="@+id/home_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x6">
+
+            <TextView
+                android:id="@+id/about_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x15"
+                android:text="关于我们"
+                android:textColor="#9b9b9b"
+                android:textSize="@dimen/x15"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#1a000000"/>
+
+        <RelativeLayout
+            android:id="@+id/home_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x6">
+
+            <TextView
+                android:id="@+id/server_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x15"
+                android:text="客服电话"
+                android:textColor="#9b9b9b"
+                android:textSize="@dimen/x15"/>
+
+            <TextView
+                android:layout_marginRight="@dimen/x14"
+                android:layout_alignParentRight="true"
+                android:id="@+id/server_phone1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x15"
+                android:text="400-6635-037"
+                android:textColor="#9b9b9b"
+                android:textSize="@dimen/x15"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#1a000000"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x58">
+
+            <TextView
+                android:id="@+id/legal_text"
+                android:textColor="@color/textcolorBule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x6"
+                android:layout_toLeftOf="@+id/view"
+                android:text="法律声明"/>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="@dimen/x1"
+                android:layout_height="@dimen/x10"
+                android:layout_centerInParent="true"
+                android:background="#1a000000"/>
+
+            <TextView
+                android:id="@+id/server_text"
+                android:textColor="@color/textcolorBule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x6"
+                android:layout_toRightOf="@+id/view"
+                android:text="服务协议"/>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/setting_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <size android:width="@dimen/x122"
+        android:height="@dimen/x40"></size>
+
+    <solid android:color="#4765a0"/>
+
+    <!--下面这个属性是定义圆角-->
+    <corners
+        android:radius="@dimen/x5"></corners>
+
+    <stroke
+        android:width="@dimen/x2"
+        android:color="#4765a0"
+        >
+
+    </stroke>
+
+
+
+</shape>

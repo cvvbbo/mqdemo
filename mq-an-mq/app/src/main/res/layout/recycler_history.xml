@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_marginBottom="@dimen/x5"
+        android:layout_marginTop="@dimen/x8"
+        android:layout_marginLeft="@dimen/x10"
+        android:id="@+id/im"
+        android:src="@drawable/his_im"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_marginTop="@dimen/y10"
+        android:layout_marginLeft="@dimen/x10"
+        android:id="@+id/tv1"
+        android:layout_toRightOf="@+id/im"
+        android:textColor="@color/back"
+        android:text="文件名称:  "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="@dimen/y10"
+        android:textColor="@color/back"
+        android:layout_toRightOf="@+id/tv1"
+        android:text="MMMMMMMM"
+        android:maxEms="5"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:id="@+id/file_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_marginTop="@dimen/y5"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_toRightOf="@+id/im"
+        android:layout_below="@+id/tv1"
+        android:id="@+id/im1"
+        android:src="@drawable/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginLeft="@dimen/x8"
+        android:textSize="11sp"
+        android:layout_marginTop="@dimen/y5"
+        android:layout_below="@+id/tv1"
+        android:layout_toRightOf="@+id/im1"
+        android:id="@+id/send_name"
+        android:text="某某某"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_marginTop="@dimen/y5"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_toRightOf="@+id/send_name"
+        android:layout_below="@+id/tv1"
+        android:id="@+id/im2"
+        android:src="@drawable/receiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginLeft="@dimen/x8"
+        android:textSize="11sp"
+        android:layout_marginTop="@dimen/y5"
+        android:layout_below="@+id/tv1"
+        android:layout_toRightOf="@+id/im2"
+        android:id="@+id/receive_name"
+        android:text="某某某"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_marginRight="@dimen/y10"
+        android:textSize="11sp"
+        android:layout_marginTop="@dimen/y10"
+        android:id="@+id/tv_time"
+        android:layout_alignParentRight="true"
+        android:text="2018-2-6-10-10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/docstatus"
+        android:layout_marginTop="@dimen/y5"
+        android:layout_marginRight="@dimen/y10"
+        android:textSize="11sp"
+        android:text="待他签收"
+        android:layout_below="@+id/tv_time"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+</RelativeLayout>

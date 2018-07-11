@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <LinearLayout
+        android:layout_marginBottom="@dimen/x70"
+        android:id="@+id/no_use"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llpoint"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/x20"
+        android:background="@drawable/login_button_shape"
+        android:id="@+id/bt"
+        android:textColor="@color/titlecolor"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y25"
+        android:text="开启秒签之旅"/>
+
+
+
+
+</RelativeLayout>

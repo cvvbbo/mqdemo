@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/r2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fail_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/page_iv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_error_page" />
+
+            <Button
+                android:id="@+id/btn_reload"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_below="@+id/page_iv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_bg"
+                android:ellipsize="end"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:text="网络错误，请重新加载"
+                android:textColor="#ff717171"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/success_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/appbars"-->
+        <!--android:background="@android:color/black"-->
+        <!--android:focusable="true"-->
+        <!--android:focusableInTouchMode="true"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/y30">-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_marginLeft="@dimen/x18"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:background="@drawable/search_shape"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="@dimen/x256"-->
+        <!--android:layout_height="@dimen/x28">-->
+
+        <!--<TextView-->
+        <!--android:drawablePadding="@dimen/x5"-->
+        <!--android:layout_marginLeft="@dimen/x10"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:id="@+id/select_page_text"-->
+        <!--android:text="包裹快递"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+
+        <!--<View-->
+        <!--android:layout_marginRight="@dimen/x4"-->
+        <!--android:layout_marginLeft="@dimen/x4"-->
+        <!--android:layout_marginBottom="@dimen/x7"-->
+        <!--android:layout_marginTop="@dimen/x7"-->
+        <!--android:background="@color/line_color"-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_height="match_parent"/>-->
+
+
+        <!--<TextView-->
+        <!--android:drawableLeft="@drawable/icon_search"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:id="@+id/searchview1"-->
+
+        <!--android:hint="快递单号/电话"-->
+        <!--android:drawablePadding="5dp"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="wrap_content"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/scan_photo"-->
+        <!--android:layout_width="@dimen/x18"-->
+        <!--android:layout_height="@dimen/x18"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_marginTop="1dp"-->
+        <!--android:src="@drawable/icon_scan"-->
+        <!--/>-->
+
+
+        <!--</LinearLayout>-->
+
+
+        <!--<View-->
+        <!--android:id="@+id/line1"-->
+        <!--android:layout_below="@+id/appbars"-->
+        <!--android:background="@color/line_color2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"/>-->
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/nestedscollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/appbars"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        >
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/vp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x100"
+                            android:layout_gravity="top"
+                            android:background="@android:color/white"
+                             />
+
+                        <com.youth.banner.Banner
+                            android:visibility="gone"
+                            android:id="@+id/banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x100" />
+
+
+
+                        <!--android:focusable="true"
+                            android:focusableInTouchMode="true"-->
+                        <!--上面这个是让edtext失去焦点，作用是为了防止输入法弹出来-->
+                        <LinearLayout
+                            android:clickable="true"
+                            android:id="@+id/appbars"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x30"
+                            android:background="@android:color/transparent"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/x267"
+                                android:layout_height="@dimen/x26"
+                                android:layout_marginLeft="@dimen/x18"
+                                android:background="@drawable/search_shape"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:textSize="12sp"
+                                    android:id="@+id/select_page_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/x10"
+                                    android:drawablePadding="@dimen/x5"
+                                    android:text="电子合同"
+                                    android:textColor="@android:color/black" />
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="@dimen/x7"
+                                    android:layout_marginLeft="@dimen/x4"
+                                    android:layout_marginRight="@dimen/x4"
+                                    android:layout_marginTop="@dimen/x7"
+                                    android:background="@color/line_color" />
+
+
+                                <TextView
+                                    android:id="@+id/searchview1"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:layout_gravity="center_vertical"
+                                    android:drawableLeft="@drawable/icon_search"
+                                    android:drawablePadding="5dp"
+                                    android:gravity="center_vertical"
+                                    android:hint="快递单号/电话" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/scan_photo"
+                                android:layout_width="@dimen/x18"
+                                android:layout_height="@dimen/x18"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="@dimen/x3"
+                                android:src="@drawable/icon_scan" />
+                        </LinearLayout>
+
+
+                        <View
+                            android:id="@+id/line1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/appbars"
+                            android:background="@color/line_color2"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/vp"
+                            android:orientation="vertical"
+                            android:paddingBottom="3dp">
+
+                            <!--这个是原生的viewpager的指示器-->
+                            <LinearLayout
+                                android:id="@+id/ll_point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:orientation="horizontal"/>
+                        </LinearLayout>
+
+                        <GridView
+                            android:visibility="gone"
+                            android:id="@+id/gv_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x65"
+                            android:layout_below="@id/vp"
+                            android:numColumns="3" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_below="@+id/vp"
+                            android:id="@+id/status_rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x35"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y3"
+                        android:background="@color/calendar_bar_color" />
+
+
+                    <!--最后在加cardview的时候把里面的-->
+
+
+                    <!--那种凸出来的布局效果在cardview上不显示-->
+
+
+                    <!--首页工作台有内容页面-->
+                    <!--2018.5.10改版-->
+                    <include
+                        layout="@layout/old_data_excle"
+                        android:visibility="gone" />
+
+                    <!--新的工作台-->
+                    <!--2018.5.10-->
+                    <RelativeLayout
+                        android:id="@+id/root_work_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/select_tv_ry"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x32"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/child_tv1"
+                                android:layout_width="@dimen/x86"
+                                android:layout_height="@dimen/x34"
+                                android:layout_marginLeft="@dimen/x62"
+                                android:gravity="center"
+                                android:text="最新合同" />
+
+                            <TextView
+                                android:id="@+id/child_tv2"
+                                android:layout_width="@dimen/x86"
+                                android:layout_height="@dimen/x34"
+                                android:layout_marginLeft="@dimen/x38"
+                                android:layout_toRightOf="@+id/child_tv1"
+                                android:gravity="center"
+                                android:text="合同记录" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/status_bar_ry"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x18"
+                            android:layout_below="@+id/select_tv_ry"
+                            android:background="@color/calendar_bar_color">
+
+                            <TextView
+                                android:id="@+id/word_status_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/x16"
+                                android:layout_marginTop="@dimen/y3"
+                                android:text="待签收2233"
+                                android:textColor="@color/text_orange_color1"
+                                android:textSize="9sp" />
+
+                            <TextView
+                                android:id="@+id/work_status_time_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="@dimen/x16"
+                                android:layout_marginTop="@dimen/y3"
+                                android:text="发件时间: 2018-03-26 03:50"
+                                android:textSize="9sp" />
+
+                        </RelativeLayout>
+
+
+                        <!--新版工作台主题内容(没有圆圈) 5.10-->
+                        <RelativeLayout
+                            android:id="@+id/new_work_excle"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y63"
+                            android:layout_below="@+id/status_bar_ry"
+                            android:background="@android:color/white">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/x31"
+                                android:layout_marginLeft="@dimen/x30"
+                                android:layout_marginRight="@dimen/x30"
+                                >
+
+                                <!--这个是根-->
+                                <!--电子发片和电子合同都走这个-->
+                                <!--后台是把这些数据一次性传过的，感觉是有问题的-->
+                                <!--<TextView-->
+                                    <!--android:visibility="gone"-->
+                                    <!--android:textSize="12sp"-->
+                                    <!--android:id="@+id/tv"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_marginBottom="@dimen/x7"-->
+                                    <!--android:layout_marginTop="@dimen/x7"-->
+                                    <!--android:ellipsize="end"-->
+                                    <!--android:maxEms="13"-->
+                                    <!--android:singleLine="true"-->
+                                    <!--android:text="合同名称："-->
+                                    <!--android:textColor="@color/back" />-->
+
+                                <TextView
+                                    android:textSize="12sp"
+                                    android:id="@+id/my_doc_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/x7"
+                                    android:layout_marginTop="@dimen/x7"
+                                    android:ellipsize="end"
+                                    android:maxEms="18"
+                                    android:singleLine="true"
+                                    android:text="123456789879"
+                                    android:textColor="@color/back" />
+
+                                <TextView
+                                    android:visibility="gone"
+                                    android:textColor="@color/text_color_red"
+                                    android:textSize="12sp"
+                                    android:layout_marginBottom="@dimen/x7"
+                                    android:id="@+id/tv_money"
+                                    android:layout_marginRight="@dimen/x5"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/x7"
+                                    android:text="¥28" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/x2"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="@drawable/shape_sofe_line"
+                                    android:layerType="software" />
+
+
+                            </RelativeLayout>
+
+
+
+                            <!--圆形工作台界面（电子合同相关）-->
+                            <include layout="@layout/new_word_circle_excel"
+
+                                />
+
+                            <include layout="@layout/new_work_detail_excel"
+                                android:visibility="gone"/>
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                    <!--旧版工作台无状态5.10-->
+                    <include
+                        layout="@layout/old_data_no_word_excel"
+                        android:visibility="gone" />
+
+
+
+                    <!--&lt;!&ndash;仿1淘宝头条的秒签头条&ndash;&gt;-->
+                    <!--<RelativeLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="@dimen/x44">-->
+
+                        <!--<ImageView-->
+                            <!--android:id="@+id/mqtv"-->
+                            <!--android:layout_marginBottom="@dimen/x6"-->
+                            <!--android:layout_marginTop="@dimen/x6"-->
+                            <!--android:src="@drawable/mqtv"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content" />-->
+
+                        <!--<com.emiaoqian.app.mq.view.UPMarqueeView-->
+                            <!--android:id="@+id/upview1"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_centerVertical="true"-->
+                            <!--android:layout_marginTop="10dp"-->
+                            <!--android:layout_toRightOf="@+id/mqtv" />-->
+                    <!--</RelativeLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x22"
+                        android:background="@color/calendar_bar_color">
+
+                        <TextView
+                            android:id="@+id/app1_title"
+                            android:textSize="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x12"
+                            android:layout_marginTop="@dimen/y4"
+                            android:text="包裹快递·常用功能"
+                             />
+
+                    </LinearLayout>
+
+
+
+                    <!--布局替换 换成recyclerview-->
+                    <GridView
+                        android:visibility="gone"
+                        android:id="@+id/gv_app"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y95"
+                        android:background="@android:color/white"
+                        android:numColumns="4"
+                        android:paddingTop="@dimen/y7"></GridView>
+                    
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_marginRight="@dimen/x12"
+                        android:id="@+id/rv_app"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y49"/>
+
+                    <!--</LinearLayout>-->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x13"
+                        android:background="@color/calendar_bar_color" />
+                    <!--仿1淘宝头条的秒签头条-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x44">
+
+                        <ImageView
+                            android:id="@+id/mqtv"
+                            android:layout_marginBottom="@dimen/x6"
+                            android:layout_marginTop="@dimen/x6"
+                            android:src="@drawable/mqtv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.emiaoqian.app.mq.view.UPMarqueeView
+                            android:id="@+id/upview1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_toRightOf="@+id/mqtv" />
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x20"
+                        android:background="@color/calendar_bar_color">
+
+                        <TextView
+                            android:id="@+id/app2_title"
+                            android:textSize="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x12"
+                            android:layout_marginTop="@dimen/y3"
+                            android:text="其他应用"
+                             />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/ry_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

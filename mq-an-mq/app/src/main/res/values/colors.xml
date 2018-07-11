@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="radiobutton_text_n_color">#333333</color>
+    <color name="radiobutton_text_p_color">#ED6A1F</color>
+
+
+
+    <color name="line_color1">#EDEDED</color>
+
+    <color name="line_color">#a6a6a6</color>
+
+    <color name="textcolorBule">#1b92b9</color>
+    
+    <color name="titlebar_color">#f8f8f8</color>
+
+    <color name="titlecolor">#657FB0</color>
+
+    <color name="umeng_select_circle">#E9EFF2</color>
+    
+    <color name="calendar_bar_color">#F1F3F3</color>
+
+
+    <color name="excel_status_blue">#00AEFF</color>
+    
+    <color name="excel_status_orange">#EC6517</color>
+
+    <color name="tab_layout_text_color">#EB6517</color>
+
+    <color name="button_color">#4765A0</color>
+
+
+    <color name="new_pager_color">#FFFFFF</color>
+
+    <!--比较好看的灰色-->
+    <color name="line_color2">#F1F2F6</color>
+
+    <color name="line_color3">#F0F0F0</color>
+
+    <color name="back">#000000</color>
+
+
+    <color name="popwindows_left">#F5F7F9</color>
+
+    <color name="popselectcolor">#E3F1FD</color>
+
+    <color name="bottom_color">#F67328</color>
+
+    <color name="white">#ffffffff</color>
+
+    <color name="my_transparent">#00000000</color>
+
+    <color name="text_color_red">#FF2121</color>
+
+    <color name="text_color">#333333</color>
+
+    <color name="asdasd">#e75946</color>
+    
+    <color name="text_orange_color1">#EA6415</color>
+
+
+    <color name="text_normal_color">#666666</color>
+
+
+</resources>

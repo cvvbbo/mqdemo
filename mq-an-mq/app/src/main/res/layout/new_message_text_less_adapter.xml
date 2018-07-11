@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:circleimageView="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/head_icon"
+        android:layout_marginTop="@dimen/x9"
+        android:layout_marginBottom="@dimen/x9"
+        android:layout_marginLeft="@dimen/x13"
+        android:src="@drawable/icon_logo"
+        android:layout_width="@dimen/y36"
+        android:layout_height="@dimen/y36" />
+
+    <TextView
+        android:id="@+id/title1"
+        android:textColor="@color/text_color"
+        android:layout_marginLeft="@dimen/x9"
+        android:textSize="15sp"
+        android:layout_marginTop="@dimen/x17"
+        android:layout_toRightOf="@+id/head_icon"
+        android:text="对方已签收"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_marginRight="@dimen/x17"
+        android:layout_marginTop="@dimen/x17"
+        android:text="2018-04-03"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x14" />
+
+    <TextView
+        android:id="@+id/text_des"
+        android:layout_marginTop="@dimen/x2"
+        android:layout_marginRight="@dimen/x17"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:maxEms="20"
+        android:layout_marginLeft="@dimen/x9"
+        android:layout_below="@+id/title1"
+        android:layout_toRightOf="@+id/head_icon"
+        android:text="您有一封新的电子合同请注意查收"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--<com.emiaoqian.app.mq.view.CircleImageView-->
+        <!--android:layout_marginLeft="@dimen/x80"-->
+        <!--android:layout_marginRight="@dimen/x80"-->
+        <!--android:layout_marginTop="@dimen/y31"-->
+        <!--android:id="@+id/headIcon"-->
+        <!--android:layout_width="@dimen/x54"-->
+        <!--android:src="@drawable/ic_launcher"-->
+        <!--android:layout_height="@dimen/x54"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--circleimageView:border_color="#ffffff"-->
+        <!--circleimageView:border_width="1dp" />-->
+
+</RelativeLayout>

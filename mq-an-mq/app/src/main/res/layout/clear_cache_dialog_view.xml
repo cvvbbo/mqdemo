@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <TextView
+        android:layout_marginTop="@dimen/x6"
+        android:textColor="@color/back"
+        android:id="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:text="已清理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_marginTop="@dimen/x7"
+        android:layout_below="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:paddingRight="@dimen/x10"
+        android:paddingLeft="@dimen/x10"
+        android:paddingTop="@dimen/x3"
+        android:paddingBottom="@dimen/x3"
+        android:textColor="#007AFF"
+        android:textSize="14sp"
+        android:text="确定"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_excel_button"/>
+
+</RelativeLayout>

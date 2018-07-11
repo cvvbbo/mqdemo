@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <!--新的状态栏，没有使用toolbar-->
+    <RelativeLayout
+        android:id="@+id/title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y27"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/returnIm_rl"
+            android:layout_width="@dimen/y20"
+            android:layout_height="@dimen/y30"
+            android:gravity="right">
+
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/returnIm"
+                android:layout_width="@dimen/x9"
+                android:layout_height="@dimen/x19"
+                android:layout_centerVertical="true"
+                android:src="@drawable/return_im" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/closeIm_rl"
+            android:layout_width="@dimen/y30"
+            android:layout_height="@dimen/y30"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/returnIm_rl">
+
+
+            <ImageView
+                android:id="@+id/closeIm"
+                android:layout_width="@dimen/x15"
+                android:layout_height="@dimen/x15"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:src="@drawable/x" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:text="消息"
+            android:id="@+id/menu_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x20"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/calendar_bar_color" />
+
+
+
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        app:srlEnablePreviewInEditMode="true"
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableHeaderTranslationContent="false"
+        app:srlEnableLoadmore="true">
+        <com.scwang.smartrefresh.header.MaterialHeader
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:visibility="gone"-->
+        <!--android:id="@+id/rv_message"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--/>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:id="@+id/no_message_note"
+                android:text="——暂无更多数据——"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/login_bt"
+                android:layout_marginTop="@dimen/x7"
+                android:layout_below="@+id/no_message_note"
+                android:layout_centerHorizontal="true"
+                android:paddingRight="@dimen/x10"
+                android:paddingLeft="@dimen/x10"
+                android:paddingTop="@dimen/x3"
+                android:paddingBottom="@dimen/x3"
+                android:textColor="#007AFF"
+                android:textSize="14sp"
+                android:text="登录"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_excel_button"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@+id/no_message_note"
+                android:id="@+id/rv_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+
+        </RelativeLayout>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    <!--<com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+    <!--android:id="@+id/refreshLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:srlDragRate="0.5"-->
+    <!--app:srlHeaderMaxDragRate="20"-->
+    <!--app:srlHeaderHeight="30dp"-->
+    <!--app:srlEnableAutoLoadmore="true"-->
+    <!--app:srlEnablePreviewInEditMode="true"-->
+    <!--app:srlHeaderTriggerRate="0.5">-->
+    <!--<pl.droidsonroids.gif.GifImageView-->
+    <!--android:id="@+id/gifview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="150dp"-->
+    <!--android:scaleType="centerCrop"-->
+    <!--android:src="@mipmap/gif_header_repast"-->
+    <!--app:layout_srlSpinnerStyle="Scale"-->
+    <!--app:layout_srlBackgroundColor="@android:color/transparent"/>-->
+
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginLeft="@dimen/x32"
+    android:layout_marginRight="@dimen/x32"
+    android:id="@+id/new_work_detail_excle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/y29">
+
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/back"
+        android:id="@+id/second_party"
+        android:text="乙方："
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textSize="12sp"
+        android:ellipsize="end"
+        android:maxEms="12"
+        android:singleLine="true"
+        android:textColor="@color/back"
+        android:layout_alignParentRight="true"
+        android:text="北京京东广能贸易有限公司"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/back"
+        android:layout_marginTop="@dimen/y6"
+        android:layout_below="@id/second_party"
+        android:id="@+id/contract_type"
+        android:text="合同类型："
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/back"
+        android:layout_marginTop="@dimen/y6"
+        android:layout_below="@id/second_party"
+        android:layout_alignParentRight="true"
+        android:id="@+id/contract_name"
+        android:text="采购合同"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

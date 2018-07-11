@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!--新的状态栏，没有使用toolbar-->
+    <RelativeLayout
+        android:id="@+id/title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y27"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/returnIm_rl"
+            android:layout_width="@dimen/y20"
+            android:layout_height="@dimen/y30"
+            android:gravity="right">
+
+
+            <ImageView
+                android:id="@+id/returnIm"
+                android:layout_width="@dimen/x9"
+                android:layout_height="@dimen/x19"
+                android:layout_centerVertical="true"
+                android:src="@drawable/return_im" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/closeIm_rl"
+            android:layout_width="@dimen/y30"
+            android:layout_height="@dimen/y30"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/returnIm_rl">
+
+
+            <ImageView
+                android:id="@+id/closeIm"
+                android:layout_width="@dimen/x15"
+                android:layout_height="@dimen/x15"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:src="@drawable/x" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/menu_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x20"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:divider="@null"
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>
