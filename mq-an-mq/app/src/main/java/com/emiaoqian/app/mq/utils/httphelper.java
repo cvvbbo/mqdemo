@@ -472,6 +472,48 @@ public class httphelper {
         });
 
     }
+    
+        //带文件以及参数提交的方法（遍历map集合）
+        public void newupfile(String url,Map<String,String> datas,final httpcallback h){
+        MultipartBody.Builder builder=new MultipartBody.Builder()
+                .setType(MultipartBody.FORM);
+        Iterator iter = datas.entrySet().iterator();
+        while (iter.hasNext()) {
+            Map.Entry entry = (Map.Entry) iter.next();
+            String key = (String) entry.getKey();
+            String val = (String) entry.getValue();
+            builder.addFormDataPart(key,val);
+        }
+        RequestBody requestBody = builder.build();
+        Request request=new Request.Builder()
+                .post(requestBody).url(url).build();
+        okHttpClient.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, final IOException e) {
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        h.fail(e);
+                    }
+                });
+            }
+            @Override
+            public void onResponse (Call call, Response response){
+                try {
+                    ResponseBody body = response.body();
+                    final String string = body.string();
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            h.success(string);
+                        }
+                    });
+                }catch (Exception e){
+                    LogUtil.e("???"+e);
+                }
+            }
+        });
+    }
 
 
 
